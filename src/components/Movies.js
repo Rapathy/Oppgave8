@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { getActor, getMovie } from '../lib/services/movieService'
+import { useState } from 'react'
+import { getMovie } from '../lib/services/movieService'
 
 export default function Movie({ title, actor }) {
   const [data, setData] = useState([])
@@ -20,7 +20,7 @@ export default function Movie({ title, actor }) {
       {data.map((Skuespiller) => (
         <p>{Skuespiller.Actor}</p>
       ))}
-      {/* {data?.length > 0 ? <p>{JSON.stringify(data)}</p> : null} */}
+       {data?.length > 0 ? <p>{JSON.stringify(data)}</p> : null}
       <button type="button" onClick={getData}>
         Vis film
       </button>

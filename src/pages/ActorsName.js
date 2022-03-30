@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getActorBySlug } from '../lib/services/movieService'
 
 function ActorsName() {
-  const [actor, setActor] = useState({})
+  const [actor, setActor] = useState(null)
   const { slug } = useParams()
 
   useEffect(() => {
