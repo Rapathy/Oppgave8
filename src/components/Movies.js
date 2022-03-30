@@ -13,13 +13,21 @@ export default function Movie({ title, actor }) {
   return (
     <div className="-2 mx-auto mt-6 max-w-sm border p-6">
       <h2>Filmer:</h2>
+      <ul>
       {data.map((tittel) => (
-        <p>{tittel.title}</p>
+        <li key ={tittel.title}>
+          {tittel.title}
+        </li>
       ))}
+    </ul>
       <h2>Skuespillere:</h2>
+      <ul>
       {data.map((Skuespiller) => (
-        <p>{Skuespiller.Actor}</p>
+        <li key={Skuespiller._id}>
+          {Skuespiller.Actor}
+        </li>
       ))}
+      </ul>
        {data?.length > 0 ? <p>{JSON.stringify(data)}</p> : null}
       <button type="button" onClick={getData}>
         Vis film

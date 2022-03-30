@@ -10,6 +10,7 @@ function ActorsName() {
     const getActor = async () => {
       const data = await getActorBySlug(slug)
       setActor(data)
+      console.log(data)
     }
     getActor()
   }, [])
