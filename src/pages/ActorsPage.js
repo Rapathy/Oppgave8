@@ -19,6 +19,7 @@ export default function ActorsPage() {
   return (
     <div className="-2 mx-auto mt-6 max-w-sm border p-6">
       <section>
+        <h1>Alle skuespillere:</h1>
         <ul>
         {actor?.map((skuespillere) => (
          <li key ={skuespillere._id}>

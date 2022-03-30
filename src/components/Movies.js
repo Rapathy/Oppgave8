@@ -6,15 +6,21 @@ export default function Movie({ title, actor }) {
 
   const getData = async () => {
     const data = await getMovie([])
-    setData()
+    setData(data)
     console.log(data)
-    
-  
   }
 
   return (
-    <div className='mx-auto mt-6 max-w-sm border -2 p-6'>
-      {data?.length > 0 ? <p>{JSON.stringify(data)}</p> : null}
+    <div className="-2 mx-auto mt-6 max-w-sm border p-6">
+      <h2>Filmer:</h2>
+      {data.map((tittel) => (
+        <p>{tittel.title}</p>
+      ))}
+      <h2>Skuespillere:</h2>
+      {data.map((Skuespiller) => (
+        <p>{Skuespiller.Actor}</p>
+      ))}
+      {/* {data?.length > 0 ? <p>{JSON.stringify(data)}</p> : null} */}
       <button type="button" onClick={getData}>
         Vis film
       </button>

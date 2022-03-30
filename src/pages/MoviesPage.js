@@ -16,8 +16,9 @@ export default function MoviesPage({}) {
   return (
     <div className="-2 mx-auto mt-6 max-w-sm border p-6">
       <section>
+        <h1>Filmer:</h1>
         {movie.map((film) => (
-          <h1>{film.title}</h1>
+          <p>{film.title}</p>
         ))}
       </section>
     </div>
